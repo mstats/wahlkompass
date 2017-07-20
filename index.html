@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Wahlkompass</title>
+  <!--<base href="/">-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/img/icon.ico">
+
+  <!-- Latest compiled and minified CSS -->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+  <link id="theme" rel="stylesheet" href="assets/style_wahlkompass.css" type="text/css">
+  <script src="assets/script.js"></script>
+  <script type="text/javascript" src="assets/szigEmbed.js"></script>
+</head>
+<body>
+    <div id="wrapper-page">
+        <div id="loadingOverlay">
+            <div id="loadingGif">
+                <img src='assets/img/Wahlkompass_animiert.gif' alt="Wahlkompass Digitales wird geladen" />
+                <p>707 Seiten Wahlprogramme werden geladen.</p>
+            </div>
+        </div>
+        <app-root></app-root>
+        <div id="imprintBar">
+            <!-- Trigger the impressum modal -->
+            Wahlkompass Digitales · Ein Angebot des Alexander von Humboldt Institut für Internet und Gesellschaft · <a type="button" data-toggle="modal" data-target="#imprint">Impressum</a>
+        </div>
+        <!-- Impressum Modal -->
+        <div id="imprint" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <p class="modal-title h3">Wahlkompass Digitales</p>
+                    </div>
+                    <div class="modal-body">
+                        <p>Der Wahlkompass Digitales schafft Transparenz im Wahlkampf und zeigt, welche Antworten die deutschen Parteien auf die digitalpolitischen Fragen haben. Das Forschungsteam des <a href="https://www.hiig.de" target="_blank">Alexander von Humboldt Institut für Internet und Gesellschaft</a> hat die Programme von sechs deutschen Parteien auf deren Stellungnahmen zu Digitalpolitik in unterschiedlichen Bereichen untersucht.</p>
+
+                        <p class="modal-subheadline h4">Creative Commons Lizenzvertrag</p>
+                        <p>Der Wahlkompass Digitales ist lizenziert unter einer <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0 DE)</a>. Bei Nutzung der Daten und Inhalte des Wahlkompasses Digitales erwarten wir eine Erwähnung.</p>
+
+                        <p class="modal-subheadline h4">Impressum</p>
+                        <p>Eine Initiative des Alexander von Humboldt Institut für Internet und Gesellschaft gGmbH
+                            <br> Französische Straße 9, 10117 Berlin · +49 30 200 760 82 · florian.luedtke [at] hiig.de · <a href="http://>www.hiig.de">www.hiig.de</a><br>
+                            <a href="https://www.hiig.de/impressum/">Vollständiges Impressum auf hiig.de</a>
+                        </p>
+                        <p> Medienpartner: <a href="http://www.sueddeutsche.de">Süddeutsche Zeitung</a>
+                            <br> Netzwerkpartner: <a href="https://www.medianet-bb.de/de/wahlkompass-digitales-zur-bundestagswahl-hiig-und-medianet-begleiten-wahlkampf">media:net Berlin Brandenburg</a>
+                            <br> Umsetzung: <a href="http://mstats.io">m·stats GmbH – data science and statistical software</a> </p>
+                        <p><img src="assets/img/img_logos-partner.png" /></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" target="_blank" href="https://www.hiig.de/project/wahlkompass-digitales/" class="btn btn-default">Zur Projektwebsite</a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Methodik Modal -->
+        <div id="methods" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <p class="modal-title h3">Methodik und Datenanalyse</p>
+                    </div>
+                    <div class="modal-body">
+
+                        <p class="modal-subheadline h4">Was sind Digitalthemen?</p>
+                        <p>Unter Digitalthemen verstehen wir alle Themen, die von den untersuchten Parteien in einen Zusammenhang mit der Digitalisierung gestellt werden. Dazu gehören vor allem Institutionen und Prozesse, die digitalisiert werden, wie die öffentliche Verwaltung, Wirtschaft und Arbeit, Bildung und Forschung, aber auch die Partizipation.Die digitalen Technologien und die Infrastrukturen, seien es das Internet, die sozialen Medien oder das Internet der Dinge, zählen wir ebenso zu den Digitalthemen. Und nicht zuletzt geht es natürlich um die positiven und negativen Folgen der Digitalisierung, von Computerkriminalität und Überwachung bis zur Erleichterung des Zugangs zu Informationen, und wie wir als Gesellschaft damit umgehen wollen.</p>
+
+                        <p class="modal-subheadline h4">Welche Parteien wurden untersucht?</p>
+                        <p>Es wurden alle Parteien untersucht, die zur Bundestagswahl 2017 antreten und die in allen Umfragen 2016 durchgängig die 5%-Schwelle überschritten haben. </p>
+
+                        <p class="modal-subheadline h4">Wie wurden Kategorien und Labels erstellt und zugeordnet?</p>
+                        <p>Wir haben die Kategorien und Labels auf der Basis des Koalitionsvertrages zwischen Union und SPD von 2013 entwickelt. Mit Hilfe dieser Kategorien und Labels haben wir dann die Wahlprogramme 2017 qualitativ analysiert und die einzelnen Sätze in den Programmen damit kodiert. Weil zwischen 2013 und 2017 einige neue Digitalthemen ihren Weg in die politische Debatte fanden, haben wir während der Analyse der Wahlprogramme auch neue Labels erstellt.</p>
+
+                        <p class="modal-subheadline h4">Wer hat die Kategorien und Labels erstellt und zugeordnet?</p>
+                        <p>Die qualitative Inhaltsanalyse und die Kodierung haben jeweils HIIG-ForscherInnen durchgeführt, in deren Forschungsgebiet die betreffenden Themen liegen.</p>
+
+                        <p class="modal-subheadline h4">Haben Sie noch weitere Fragen zum Wahlkompass Digitales?</p>
+                        <p>Schicken Sie Ihre Fragen und Anregungen an Projektleiter Jörg Pohle (joerg.pohle [at] hiig.de).</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="scripts.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script><script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="scripts.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+</html>
