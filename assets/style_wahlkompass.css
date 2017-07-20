@@ -6276,8 +6276,11 @@ html, body, #wrapper-page {
   #loadingOverlay #loadingGif {
     width: 90%;
     margin-left: -45%;
-    top: 70%;
+    top: 60%;
     margin-top: -30%; }
+    #loadingOverlay #loadingGif img {
+      width: 100%;
+      display: block; }
 
   .jumbotron {
     padding: 10px 0 !important; }
