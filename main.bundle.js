@@ -217,7 +217,7 @@ var NavigationComponent = (function () {
         this.labels = [null, null, null, null, null];
         this.newLabels = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */]();
         this.warning = false;
-        this.showAll = false;
+        this.showAll = true;
         this.splittedCategories = [];
         this.labelsSelected = "no";
         this.categories = __WEBPACK_IMPORTED_MODULE_1__wahlprogramme_categories_json___default.a;
@@ -462,7 +462,7 @@ module.exports = module.exports.toString();
 /***/ 299:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron\">\n  <div class=\"container-fluid\">\n    <img alt=\"Wahlkompass Digitales\" src=\"assets/img/img_logo.png\" class=\"logo\">\n    <div class=\"dropdown\">\n      <button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenuMore\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n        <span class=\"material-icon\"></span>\n      </button>\n      <ul aria-labelledby=\"dropdownMenuMore\" class=\"dropdown-menu dropdown-menu-right\">\n        <li><a href=\"#\" target=\"_blank\">Source Code der Software</a></li>\n        <li><a href=\"https://docs.google.com/a/hiig.de/spreadsheets/d/1LOOYGkhMM97EGARpNXjzxH8H4MF2dlUvk5wKaOCnkTY/edit?usp=sharing_eil&ts=596e24f8\" target=\"_blank\">Daten abrufen</a></li>\n        <li><a data-toggle=\"modal\" data-target=\"#methods\">Methodik und Datenanalyse</a></li>\n        <li role=\"separator\" class=\"divider\"></li>\n        <li><a data-toggle=\"modal\" data-target=\"#imprint\">Impressum</a></li>\n        <li><a href=\"https://www.hiig.de/wahlkompass\" target=\"_blank\">Projektwebsite</a></li>\n      </ul>\n    </div>\n    <div class=\"dropdown\">\n      <button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenuShare\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"buildUrl()\">\n        <span class=\"material-icon\"></span>\n      </button>\n      <ul aria-labelledby=\"dropdownMenuShare\" class=\"dropdown-menu dropdown-menu-right\">\n        <li><a target=\"_blank\" href=\"https://www.facebook.com/sharer/sharer.php?u={{ shareUrl }}\">Share on Facebook</a></li>\n        <li><a target=\"_blank\" href=\"https://twitter.com/home?status={{ shareUrl }}\">Share on Twitter</a></li>\n        <li><a target=\"_blank\" href=\"https://plus.google.com/share?url={{ shareUrl }}\">Share on Google+</a></li>\n        <li><a target=\"_blank\" href=\"{{ fullUrl }}\">Link to self</a></li>\n      </ul>\n    </div>\n  </div>\n</div>\n<!--shareUrl: {{ shareUrl }}-->\n<div class=\"container\">\n  <navigation [labels]=\"labels\" (newLabels)=\"newLabels($event)\" (setActiveToplevel)=\"setActiveToplevel($event)\" (deletedLabel)=\"deletedLabel($event)\"></navigation>\n  <content #content [activeParties]=\"activeParties\" [labels]=\"labels\"></content>\n  <div id=\"programmes\" class=\"row\">\n    <article class=\"column left col-md-6\">\n        <div class=\"howto\">\n            <img src=\"assets/img/howto-17.png\" />\n            <p>Wählen Sie Themen mit Bezug auf Digitalpolitik</p>\n            <img src=\"assets/img/howto-18.png\" />\n            <p>Wählen Sie eine Partei</p>\n            <img src=\"assets/img/howto-19.png\" />\n            <p>Springen Sie zu den markierten Stellen</p>\n        </div>\n    </article>\n    <article class=\"column right col-md-6 hidden-xs hidden-sm\">\n        <div class=\"howto\">\n            <img src=\"assets/img/howto-17.png\" />\n            <p>Wählen Sie Themen mit Bezug auf Digitalpolitik</p>\n            <img src=\"assets/img/howto-18.png\" />\n            <p>Wählen Sie eine weitere Partei zum Vergleich</p>\n            <img src=\"assets/img/howto-19.png\" />\n            <p>Springen Sie zu den markierten Stellen</p>\n        </div>\n    </article>\n  </div>\n</div>\n"
+module.exports = "<div class=\"jumbotron\">\n  <div class=\"container-fluid\">\n    <img alt=\"Wahlkompass Digitales\" src=\"assets/img/img_logo.png\" class=\"logo\">\n    <div class=\"dropdown\">\n      <button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenuMore\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n        <span class=\"material-icon\"></span>\n      </button>\n      <ul aria-labelledby=\"dropdownMenuMore\" class=\"dropdown-menu dropdown-menu-right\">\n        <li><a href=\"https://github.com/mstats/wahlkompass/\" target=\"_blank\">Source Code der Software</a></li>\n        <li><a href=\"https://docs.google.com/a/hiig.de/spreadsheets/d/1LOOYGkhMM97EGARpNXjzxH8H4MF2dlUvk5wKaOCnkTY/edit?usp=sharing_eil&ts=596e24f8\" target=\"_blank\">Daten abrufen</a></li>\n        <li><a data-toggle=\"modal\" data-target=\"#methods\">Methodik und Datenanalyse</a></li>\n        <li role=\"separator\" class=\"divider\"></li>\n        <li><a data-toggle=\"modal\" data-target=\"#imprint\">Impressum</a></li>\n        <li><a href=\"https://www.hiig.de/wahlkompass\" target=\"_blank\">Projektwebsite</a></li>\n      </ul>\n    </div>\n    <div class=\"dropdown\">\n      <button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenuShare\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" (click)=\"buildUrl()\">\n        <span class=\"material-icon\"></span>\n      </button>\n      <ul aria-labelledby=\"dropdownMenuShare\" class=\"dropdown-menu dropdown-menu-right\">\n        <li><a target=\"_blank\" href=\"https://www.facebook.com/sharer/sharer.php?u={{ shareUrl }}\">Share on Facebook</a></li>\n        <li><a target=\"_blank\" href=\"https://twitter.com/home?status={{ shareUrl }}\">Share on Twitter</a></li>\n        <li><a target=\"_blank\" href=\"https://plus.google.com/share?url={{ shareUrl }}\">Share on Google+</a></li>\n        <li><a target=\"_blank\" href=\"{{ fullUrl }}\">Link to self</a></li>\n      </ul>\n    </div>\n  </div>\n</div>\n<!--shareUrl: {{ shareUrl }}-->\n<div class=\"container\">\n  <navigation [labels]=\"labels\" (newLabels)=\"newLabels($event)\" (setActiveToplevel)=\"setActiveToplevel($event)\" (deletedLabel)=\"deletedLabel($event)\"></navigation>\n  <content #content [activeParties]=\"activeParties\" [labels]=\"labels\"></content>\n  <div id=\"programmes\" class=\"row\">\n    <article class=\"column left col-md-6\">\n        <div class=\"howto\">\n            <img src=\"assets/img/howto-17.png\" />\n            <p>Wählen Sie Themen mit Bezug auf Digitalpolitik</p>\n            <img src=\"assets/img/howto-18.png\" />\n            <p>Wählen Sie eine Partei</p>\n            <img src=\"assets/img/howto-19.png\" />\n            <p>Springen Sie zu den markierten Stellen</p>\n        </div>\n    </article>\n    <article class=\"column right col-md-6 hidden-xs hidden-sm\">\n        <div class=\"howto\">\n            <img src=\"assets/img/howto-17.png\" />\n            <p>Wählen Sie Themen mit Bezug auf Digitalpolitik</p>\n            <img src=\"assets/img/howto-18.png\" />\n            <p>Wählen Sie eine weitere Partei zum Vergleich</p>\n            <img src=\"assets/img/howto-19.png\" />\n            <p>Springen Sie zu den markierten Stellen</p>\n        </div>\n    </article>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -476,7 +476,7 @@ module.exports = "<!--\n<div class=\"row\" id=\"contentHeader\">\n  <h3 class=\"
 /***/ 301:
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div id=\"filter\" class=\"navbar-header\">\n      <a class=\"navbar-brand\">\n        <img alt=\"Wahlkompas Digitales\" src=\"assets/img/icon-01.png\">\n      </a>\n\n      <button _ngcontent-c1=\"\" aria-expanded=\"false\" class=\"navbar-toggle collapsed\" data-target=\".topAndSub\"\n              data-toggle=\"collapse\" type=\"button\"><span>Themen</span></button>\n\n      <ng-container *ngFor=\" let label of labels, let i = index\">\n        <button class=\"btn btn-xs\" type=\"button\" (click)=\"deleteLabel(label)\" *ngIf=\"label != null\"\n                [ngClass]=\"' tag label-' + i\">\n          {{label}}\n        </button>\n      </ng-container>\n\n      <p class=\"navbar-text\" [attr.labels-selected]=\"labelsSelected\">\n        Bitte wählen Sie bis zu 5 Digitalthemen aus unserer Auswahl.\n      </p>\n    </div>\n\n    <!-- Collect the nav links, forms, and other content for toggling -->\n    <div class=\"hidden-lg hidden-md\">\n      <div class=\"collapse navbar-collapse topAndSub\" id=\"topAndSubMobile\">\n        <ul class=\"nav navbar-nav\">\n\n          <li class=\"dropdown\" (click)=\"updateCategories(top)\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"\n               role=\"button\" aria-haspopup=\"true\"\n               aria-expanded=\"false\">\n              Alle\n              <span class=\"caret\"></span>\n            </a>\n            <ul class=\"dropdown-menu\">\n              <ng-container *ngFor=\"let x of splittedCategories\">\n                <li><a href=\"#\"><strong>{{ sub }}</strong></a></li>\n                <ng-container *ngFor=\"let category of x\">\n                  <li class=\"label-{{labels.indexOf(category)}}\"\n                      (click)=\"addNewLabel($event, category)\"\n                      [ngClass]=\"{'active': labels.indexOf(category) > -1}\">\n                    <a href=\"#\">{{ category }}</a>\n                  </li>\n                </ng-container>\n              </ng-container>\n            </ul>\n          </li>\n\n          <ng-container *ngFor=\"let top of toplevel\">\n            <li class=\"dropdown\" (click)=\"updateCategories(top)\">\n              <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"\n                 role=\"button\" aria-haspopup=\"true\"\n                 aria-expanded=\"false\">\n                {{ top }}\n                <span class=\"caret\"></span>\n              </a>\n              <ul class=\"dropdown-menu\">\n                <ng-container *ngFor=\"let sub of sublevel\">\n                  <li><a href=\"#\"><strong>{{ sub }}</strong></a></li>\n                  <ng-container *ngFor=\"let ground of groundlevel[sub] | toArray\">\n                    <li class=\"label-{{labels.indexOf(ground)}}\"\n                        (click)=\"addNewLabel($event, ground)\"\n                        [ngClass]=\"{'active': labels.indexOf(ground) > -1}\">\n                      <a href=\"#\">{{ ground }}\n                      </a>\n                    </li>\n                  </ng-container>\n                </ng-container>\n              </ul>\n            </li>\n          </ng-container>\n\n        </ul>\n      </div><!-- /.navbar-collapse -->\n    </div>\n\n    <div class=\"hidden-xs hidden-sm\">\n      <div id=\"topAndSubCategories\" class=\"navbar-collapse collapse topAndSub\">\n        <div class=\"row\" id=\"topCategories\">\n          <nav class=\"nav nav-pills\">\n            <li (click)=\"showAll = true; updateCategories('alle')\" [ngClass]=\"{'active': showAll == true}\"><a\n              class=\"all\">Alle</a></li>\n            <ng-container *ngFor=\"let top of toplevel\">\n              <li role=\"presentation\" (click)=\"updateCategories(top)\" [ngClass]=\"{'active': top === activeToplevel}\"><a>{{top}}</a></li>\n            </ng-container>\n          </nav>\n        </div>\n        <div class=\"row\" id=\"subCategories\">\n          <div *ngIf=\"showAll == false\">\n            <div class=\"col-md-3\" *ngFor=\"let sub of sublevel\">\n              <h5>{{sub}}</h5>\n              <ng-container *ngFor=\"let ground of groundlevel[sub] | toArray\">\n                <p class=\"label-{{labels.indexOf(ground)}}\" (click)=\"addNewLabel($event, ground)\"\n                   [ngClass]=\"{'active': labels.indexOf(ground) > -1}\">{{ground}}</p>\n              </ng-container>\n            </div>\n          </div>\n          <div *ngIf=\"showAll == true\">\n            <div class=\"col-md-3\" *ngFor=\"let x of splittedCategories\">\n              <ng-container *ngFor=\"let category of x\">\n                <p class=\"label-{{labels.indexOf(category)}}\" (click)=\"addNewLabel($event, category)\"\n                   [ngClass]=\"{'active': labels.indexOf(category) > -1}\">{{category}}</p>\n              </ng-container>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"warning\" class=\"row wrapper-alert\">\n        <div class=\"col-md-12\">\n          <p class=\"alert alert-warning alert-dismissible\">\n            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span\n              aria-hidden=\"true\">&times;</span></button>\n            <i class=\"zmdi zmdi-alert-circle-o\"></i> Sie haben bereits 5 Labels ausgewählt,\n            entfernen Sie Label von Ihrer Auswahl, wenn Sie weitere Themen vergleichen wollen.\n          </p>\n        </div>\n      </div>\n    </div>\n\n\n  </div><!-- /.container-fluid -->\n</nav>\n\n<!--\n<div id=\"navigationHeader\" class=\"row\">\n  <h3 class=\"step\">Welche Digitalthemen interessieren Sie?</h3>\n</div>\n-->\n<!--\n<div id=\"filter\" class=\"row\">\n  <div class=\"col-md-12\">\n    <span class=\"label-text\">Ausgewählte Themen</span>\n    <ng-container *ngFor=\" let label of labels, let i = index\">\n      <button class=\"btn btn-xs\" type=\"button\" (click)=\"deleteLabel(label)\" *ngIf=\"label != null\"\n              [ngClass]=\"' tag label-' + i\">\n        {{label}} <span class=\"badge\"> X </span>\n      </button>\n    </ng-container>\n  </div>\n</div>\n-->\n\n"
+module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div id=\"filter\" class=\"navbar-header\">\n      <a class=\"navbar-brand\">\n        <img alt=\"Wahlkompas Digitales\" src=\"assets/img/icon-01.png\">\n      </a>\n\n      <button _ngcontent-c1=\"\" aria-expanded=\"false\" class=\"navbar-toggle collapsed\" data-target=\".topAndSub\"\n              data-toggle=\"collapse\" type=\"button\"><span>Themen</span></button>\n\n      <ng-container *ngFor=\" let label of labels, let i = index\">\n        <button class=\"btn btn-xs\" type=\"button\" (click)=\"deleteLabel(label)\" *ngIf=\"label != null\"\n                [ngClass]=\"' tag label-' + i\">\n          {{label}}\n        </button>\n      </ng-container>\n\n      <p class=\"navbar-text\" [attr.labels-selected]=\"labelsSelected\">\n        Bitte wählen Sie bis zu 5 Digitalthemen aus unserer Auswahl.\n      </p>\n    </div>\n\n    <!-- Collect the nav links, forms, and other content for toggling -->\n    <div class=\"hidden-lg hidden-md\">\n      <div class=\"collapse navbar-collapse topAndSub\" id=\"topAndSubMobile\">\n        <ul class=\"nav navbar-nav\">\n\n          <li class=\"dropdown\" (click)=\"updateCategories(top)\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"\n               role=\"button\" aria-haspopup=\"true\"\n               aria-expanded=\"false\">\n              Alle\n              <span class=\"caret\"></span>\n            </a>\n            <ul class=\"dropdown-menu\">\n              <ng-container *ngFor=\"let x of splittedCategories\">\n                <li><a href=\"#\"><strong>{{ sub }}</strong></a></li>\n                <ng-container *ngFor=\"let category of x\">\n                  <li class=\"label-{{labels.indexOf(category)}}\"\n                      (click)=\"addNewLabel($event, category)\"\n                      [ngClass]=\"{'active': labels.indexOf(category) > -1}\">\n                    <a href=\"#\">{{ category }}</a>\n                  </li>\n                </ng-container>\n              </ng-container>\n            </ul>\n          </li>\n\n          <ng-container *ngFor=\"let top of toplevel\">\n            <li class=\"dropdown\" (click)=\"updateCategories(top)\">\n              <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"\n                 role=\"button\" aria-haspopup=\"true\"\n                 aria-expanded=\"false\">\n                {{ top }}\n                <span class=\"caret\"></span>\n              </a>\n              <ul class=\"dropdown-menu\">\n                <ng-container *ngFor=\"let sub of sublevel\">\n                  <li><a href=\"#\"><strong>{{ sub }}</strong></a></li>\n                  <ng-container *ngFor=\"let ground of groundlevel[sub] | toArray\">\n                    <li class=\"label-{{labels.indexOf(ground)}}\"\n                        (click)=\"addNewLabel($event, ground)\"\n                        [ngClass]=\"{'active': labels.indexOf(ground) > -1}\">\n                      <a href=\"#\">{{ ground }}\n                      </a>\n                    </li>\n                  </ng-container>\n                </ng-container>\n              </ul>\n            </li>\n          </ng-container>\n\n        </ul>\n      </div><!-- /.navbar-collapse -->\n    </div>\n\n    <div class=\"hidden-xs hidden-sm\">\n      <div id=\"topAndSubCategories\" class=\"navbar-collapse collapse topAndSub\">\n        <div class=\"row\" id=\"topCategories\">\n          <nav class=\"nav nav-pills\">\n            <li (click)=\"showAll = true; updateCategories('alle')\" [ngClass]=\"{'active': showAll == true}\"><a\n              class=\"all\">Alle</a></li>\n            <ng-container *ngFor=\"let top of toplevel\">\n              <li role=\"presentation\" (click)=\"updateCategories(top)\" [ngClass]=\"{'active': showAll == false && top === activeToplevel}\"><a>{{top}}</a></li>\n            </ng-container>\n          </nav>\n        </div>\n        <div class=\"row\" id=\"subCategories\">\n          <div *ngIf=\"showAll == false\">\n            <div class=\"col-md-3\" *ngFor=\"let sub of sublevel\">\n              <h5>{{sub}}</h5>\n              <ng-container *ngFor=\"let ground of groundlevel[sub] | toArray\">\n                <p class=\"label-{{labels.indexOf(ground)}}\" (click)=\"addNewLabel($event, ground)\"\n                   [ngClass]=\"{'active': labels.indexOf(ground) > -1}\">{{ground}}</p>\n              </ng-container>\n            </div>\n          </div>\n          <div *ngIf=\"showAll == true\">\n            <div class=\"col-md-3\" *ngFor=\"let x of splittedCategories\">\n              <ng-container *ngFor=\"let category of x\">\n                <p class=\"label-{{labels.indexOf(category)}}\" (click)=\"addNewLabel($event, category)\"\n                   [ngClass]=\"{'active': labels.indexOf(category) > -1}\">{{category}}</p>\n              </ng-container>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"warning\" class=\"row wrapper-alert\">\n        <div class=\"col-md-12\">\n          <p class=\"alert alert-warning alert-dismissible\">\n            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span\n              aria-hidden=\"true\">&times;</span></button>\n            <i class=\"zmdi zmdi-alert-circle-o\"></i> Sie haben bereits 5 Labels ausgewählt,\n            entfernen Sie Label von Ihrer Auswahl, wenn Sie weitere Themen vergleichen wollen.\n          </p>\n        </div>\n      </div>\n    </div>\n\n\n  </div><!-- /.container-fluid -->\n</nav>\n\n<!--\n<div id=\"navigationHeader\" class=\"row\">\n  <h3 class=\"step\">Welche Digitalthemen interessieren Sie?</h3>\n</div>\n-->\n<!--\n<div id=\"filter\" class=\"row\">\n  <div class=\"col-md-12\">\n    <span class=\"label-text\">Ausgewählte Themen</span>\n    <ng-container *ngFor=\" let label of labels, let i = index\">\n      <button class=\"btn btn-xs\" type=\"button\" (click)=\"deleteLabel(label)\" *ngIf=\"label != null\"\n              [ngClass]=\"' tag label-' + i\">\n        {{label}} <span class=\"badge\"> X </span>\n      </button>\n    </ng-container>\n  </div>\n</div>\n-->\n\n"
 
 /***/ }),
 
@@ -740,12 +740,13 @@ var ContentComponent = (function () {
     function ContentComponent(highligtService) {
         this.highligtService = highligtService;
         this.parties = ['CDU/CSU', 'SPD', 'Die Grünen', 'Die Linke', 'FDP', 'AFD'];
-        this.activeParties = [null, null]; // activeParties[0] Party left, activeParties[1] Party right
         this.labels = [null, null, null, null, null];
+        this.activeParties = [null, null]; // [left, right]
+        this.fixedHost = "wahlkompass-digitales.de";
         this.programme_left = "Bitte Partei wählen";
-        this.programme_right = this.programme_left;
+        this.programme_right = "Bitte Partei wählen";
         this.left_default = "yes";
-        this.right_default = this.left_default;
+        this.right_default = "yes";
         this.programmes = [__WEBPACK_IMPORTED_MODULE_3__wahlprogramme_cdu_html___default.a, __WEBPACK_IMPORTED_MODULE_2__wahlprogramme_spd_html___default.a, __WEBPACK_IMPORTED_MODULE_7__wahlprogramme_gruene_html___default.a, __WEBPACK_IMPORTED_MODULE_6__wahlprogramme_linke_html___default.a, __WEBPACK_IMPORTED_MODULE_5__wahlprogramme_fdp_html___default.a, __WEBPACK_IMPORTED_MODULE_4__wahlprogramme_afd_html___default.a];
     }
     ContentComponent.prototype.ngOnInit = function () {
@@ -765,27 +766,9 @@ var ContentComponent = (function () {
         }
         var id = this.parties.indexOf(party);
         var programme = this.programmes[id];
-        // Unzip programme here
         $('.column.' + position).html(programme);
-        // add attribute active-labels to count active labels
         $('.column.' + position + ' span[labels]').attr('active-labels', 0);
         this.highligtService.highlightAllLabels(position, this.labels);
-    };
-    ContentComponent.prototype.showOrHideParty = function (party) {
-        if (this.activeParties.indexOf(party) > -1) {
-            this.hideParty(party);
-        }
-        else {
-            if (this.activeParties.indexOf(null) > -1) {
-                this.showParty(party);
-            }
-        }
-        this.buildUrl();
-    };
-    ContentComponent.prototype.showParty = function (party) {
-        var index = this.findIndex(this.activeParties);
-        this.activeParties[index] = party;
-        this.loadProgramme(party, index);
     };
     ContentComponent.prototype.showPartyLeft = function (party) {
         console.log(party);
@@ -802,20 +785,6 @@ var ContentComponent = (function () {
         this.programme_right = party;
         this.right_default = "no";
     };
-    ContentComponent.prototype.hideParty = function (party) {
-        var index = this.activeParties.indexOf(party);
-        this.activeParties[index] = null;
-        var position = this.getPosition(index);
-        $('.column.' + position).html('<p>' + 'Bitte ein Programm wählen' + '</p>');
-    };
-    ContentComponent.prototype.findIndex = function (array) {
-        for (var i = 0; i < array.length; i++) {
-            if (array[i] == null) {
-                return i;
-            }
-        }
-        return -1;
-    };
     ContentComponent.prototype.getPosition = function (index) {
         var position;
         if (index === 0) {
@@ -830,15 +799,23 @@ var ContentComponent = (function () {
         this.fullUrl = this.constructUrl(),
             this.shareUrl = this.constructUrl(true);
     };
-    ContentComponent.prototype.constructUrl = function (urlify) {
+    ContentComponent.prototype.constructUrl = function (urlify, hardcodeDomain) {
         var _this = this;
         if (urlify === void 0) { urlify = false; }
+        if (hardcodeDomain === void 0) { hardcodeDomain = true; }
+        var host;
         var basis;
-        if (urlify) {
-            basis = location.protocol.slice(0, -1) + '%3A//' + window.location.host;
+        if (hardcodeDomain) {
+            host = this.fixedHost;
         }
         else {
-            basis = location.protocol + '//' + window.location.host;
+            host = window.location.host;
+        }
+        if (urlify) {
+            basis = location.protocol.slice(0, -1) + '%3A//' + host;
+        }
+        else {
+            basis = location.protocol + '//' + host;
         }
         basis += '?labels=';
         var labels_join = this.labels.filter(function (x) { return (x !== null) && (x !== ''); }).map(function (x) { return _this.highligtService.getUrlfiedLabel(x); }).join(",");
@@ -854,11 +831,11 @@ var ContentComponent = (function () {
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
     __metadata("design:type", Object)
-], ContentComponent.prototype, "activeParties", void 0);
+], ContentComponent.prototype, "labels", void 0);
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
     __metadata("design:type", Object)
-], ContentComponent.prototype, "labels", void 0);
+], ContentComponent.prototype, "activeParties", void 0);
 ContentComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_4" /* Component */])({
         selector: 'content',
@@ -905,13 +882,10 @@ var HighlightService = (function () {
     }
     HighlightService.prototype.highlight = function (labels, label, i, preselector) {
         if (preselector === void 0) { preselector = ''; }
-        console.log("Highlight label " + label + " at index: " + i);
         $(preselector + 'span[labels*="' + this.getUrlfiedLabel(label) + '"]').each(function () {
             var currentNumOfLabels = $(this).attr('active-labels');
             $(this).attr('active-labels', (++currentNumOfLabels));
-            /* Add label-number */
             $(this).addClass('label-' + i);
-            /* Add has-label or has-multiple-label */
             if ($(this).hasClass('has-label')) {
                 $(this).addClass('has-multiple-labels');
             }
@@ -961,8 +935,6 @@ var HighlightService = (function () {
     };
     /* ----- BEGIN JUMPER ----- */
     HighlightService.prototype.trigger_jumper = function (labels) {
-        console.log("Trigger jumper");
-        console.log(labels);
         this.trigger_single_jumper(labels, "left");
         this.trigger_single_jumper(labels, "right");
     };
@@ -979,10 +951,6 @@ var HighlightService = (function () {
             var currentPointer = currentPosElement[label_id];
             var request_id = jumpers[label_id]["locations"][currentPointer];
             var jRequest = $("#" + request_id);
-            console.log("Click on " + label_id +
-                " with id " + request_id +
-                " at " + jRequest.offset().top +
-                ".");
             $(this).children('.labelname')
                 .children('.current-label-position')
                 .text((currentPointer + 1) + '/');
@@ -1005,10 +973,8 @@ var HighlightService = (function () {
             var url_label = this.getUrlfiedLabel(this.labels[i_label]);
             var search_p = "." + column + " p:has(span[labels*=" + url_label + "])";
             var search_li = "." + column + " li:has(span[labels*=" + url_label + "])";
-            //console.log(search)
             var all_p = $(search_p);
             var all_li = $(search_li);
-            //console.log(all_p)
             this.jumpers[column][i_label] = {
                 name: this.labels[i_label],
                 url_label: url_label,
@@ -1027,7 +993,6 @@ var HighlightService = (function () {
                 i_li++;
             }
             this.jumpers[column][i_label]["locations"] = temp_locations.sort();
-            //console.log(this.jumpers[column][i_label]);
         }
     };
     HighlightService.prototype.write_all_labels_into_jumper = function (column, counterId) {
