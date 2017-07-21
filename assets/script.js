@@ -16,8 +16,6 @@
 
 /* ============================================== DOCUMENT READY ========================================== */
 
-
-
 $(function () {
     
     /* Hides first headline once filter is clicked */
@@ -109,4 +107,7 @@ $(function () {
         $(this).next(".wrapper-inner").toggle();
       }
     );
+
+    szEmbedService.setHeight("800px");
+
 });
