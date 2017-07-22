@@ -98,7 +98,7 @@ $(function () {
         //hide Loading Animation
         $('#loadingOverlay').fadeOut();
     }, 1000);
-    
+
     $("body").on(
       "click",
       ":header",
