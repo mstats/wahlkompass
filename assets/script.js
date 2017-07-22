@@ -47,6 +47,15 @@ $(function () {
             }
         }
     );
+
+    $(".navbar-toggle").click(function() {
+        $navbar = $(".navbar");
+        if ($navbar.attr("open")) {
+            $navbar.removeAttr("open");
+        } else {
+            $navbar.attr("open", "true");
+        }
+    })
     
     /* Hides second headline once party is clicked + removes Debug Parties */
     

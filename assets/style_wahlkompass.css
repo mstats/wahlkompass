@@ -5897,6 +5897,8 @@ button.close {
         color: #fff;
         background-color: rgba(0, 0, 0, 0.2);
         border-color: none; }
+    .jumbotron .dropdown .dropdown-menu > li > a {
+      cursor: pointer; }
 
 /* =================================================== Imprint ==  */
 #imprintBar {
@@ -5972,10 +5974,6 @@ navigation > .navbar {
         navigation > .navbar .container-fluid > .navbar-header .navbar-toggle span:before {
           content: '';
           padding-right: 10px; }
-      navigation > .navbar .container-fluid > .navbar-header .navbar-toggle:hover span:before, navigation > .navbar .container-fluid > .navbar-header .navbar-toggle[aria-expanded='false']:hover span:before {
-        content: ''; }
-      navigation > .navbar .container-fluid > .navbar-header .navbar-toggle[aria-expanded='true']:hover span:before {
-        content: ''; }
     navigation > .navbar .container-fluid > .navbar-header button.tag span.badge {
       display: none; }
     navigation > .navbar .container-fluid > .navbar-header button.tag:after {
@@ -5984,6 +5982,12 @@ navigation > .navbar {
       width: 15px; }
     navigation > .navbar .container-fluid > .navbar-header button.tag:hover:after {
       content: ''; }
+  navigation > .navbar .container-fluid > .navbar-header .navbar-toggle:hover span:before, navigation > .navbar .container-fluid > .navbar-header:hover .navbar-toggle > span:before {
+    content: ''; }
+  navigation > .navbar[open] .container-fluid > .navbar-header .navbar-toggle > span:before {
+    content: ''; }
+  navigation > .navbar[open] .container-fluid > .navbar-header .navbar-toggle:hover span:before, navigation > .navbar[open] .container-fluid > .navbar-header:hover .navbar-toggle > span:before {
+    content: ''; }
   navigation > .navbar .navbar-collapse.collapse {
     display: none !important; }
   navigation > .navbar .navbar-collapse[aria-expanded='true'] {
@@ -6072,7 +6076,8 @@ navigation > .navbar {
   float: right;
   margin: 10px 0 0; }
   .counter navigation > .navbar .container-fluid > .navbar-header button.tag span, navigation > .navbar .container-fluid > .navbar-header .counter button.tag span, .counter .tag span {
-    background: none; }
+    background: none;
+    cursur: pointer; }
 
 /* Load partials */
 /* =================================================== TYPOGRAPHY ==*/
@@ -6105,6 +6110,7 @@ ul, ol {
 /* Header Ausklappen */
 article h2, article h3, article h4, article .h2, article .h3, article .h4 {
   position: relative;
+  cursor: pointer;
   /* Caret icons */
   /* Minimise if hidden */ }
   article h2:before, article h3:before, article h4:before, article .h2:before, article .h3:before, article .h4:before {
@@ -6134,8 +6140,8 @@ article h2, article h3, article h4, article .h2, article .h3, article .h4 {
   text-align: center;
   border: 3px dashed #eee;
   height: 100%;
-  padding: 30px 0 0;
-  margin: 0 15px; }
+  padding: 30px 0 0 !important;
+  margin: 20px 15px !important; }
 
 .howto p {
   margin: 10px 0 20px;
