@@ -5865,17 +5865,20 @@ button.close {
   text-align: center; }
   #loadingOverlay #loadingGif {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     margin-left: -300px;
     margin-top: -150px;
     color: #fff; }
     #loadingOverlay #loadingGif p {
-      position: relative;
-      top: -85px;
       color: #ccc;
       font-size: 0.9em;
       font-family: monospace; }
+  #loadingOverlay .logosPartner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0; }
 
 .jumbotron {
   background: #425c67; }
@@ -5894,6 +5897,42 @@ button.close {
         color: #fff;
         background-color: rgba(0, 0, 0, 0.2);
         border-color: none; }
+    .jumbotron .dropdown .dropdown-menu > li > a {
+      cursor: pointer; }
+
+/* =================================================== Imprint ==  */
+#imprintBar {
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+  font-size: 11px;
+  color: rgba(136, 136, 136, 0.8);
+  text-align: right;
+  padding: 4px 10px; }
+  #imprintBar a {
+    color: #888; }
+
+#imprint .modal-dialog,
+#methods .modal-dialog {
+  width: 80%; }
+#imprint .modal-title.h3,
+#imprint .modal-subheadline.h4,
+#methods .modal-title.h3,
+#methods .modal-subheadline.h4 {
+  text-transform: uppercase;
+  color: #888;
+  font-size: 1.0em; }
+#imprint .modal-subheadline.h4,
+#methods .modal-subheadline.h4 {
+  color: #000;
+  margin-top: 30px; }
+#imprint p > img,
+#methods p > img {
+  max-width: 100%; }
 
 /* =================================================== NAVIGTAION (SELECT TOPICS) ==*/
 .wrapper-alert .col-md-12 {
@@ -5935,10 +5974,6 @@ navigation > .navbar {
         navigation > .navbar .container-fluid > .navbar-header .navbar-toggle span:before {
           content: '';
           padding-right: 10px; }
-      navigation > .navbar .container-fluid > .navbar-header .navbar-toggle:hover span:before, navigation > .navbar .container-fluid > .navbar-header .navbar-toggle[aria-expanded='false']:hover span:before {
-        content: ''; }
-      navigation > .navbar .container-fluid > .navbar-header .navbar-toggle[aria-expanded='true']:hover span:before {
-        content: ''; }
     navigation > .navbar .container-fluid > .navbar-header button.tag span.badge {
       display: none; }
     navigation > .navbar .container-fluid > .navbar-header button.tag:after {
@@ -5947,6 +5982,12 @@ navigation > .navbar {
       width: 15px; }
     navigation > .navbar .container-fluid > .navbar-header button.tag:hover:after {
       content: ''; }
+  navigation > .navbar .container-fluid > .navbar-header .navbar-toggle:hover span:before, navigation > .navbar .container-fluid > .navbar-header:hover .navbar-toggle > span:before {
+    content: ''; }
+  navigation > .navbar[open] .container-fluid > .navbar-header .navbar-toggle > span:before {
+    content: ''; }
+  navigation > .navbar[open] .container-fluid > .navbar-header .navbar-toggle:hover span:before, navigation > .navbar[open] .container-fluid > .navbar-header:hover .navbar-toggle > span:before {
+    content: ''; }
   navigation > .navbar .navbar-collapse.collapse {
     display: none !important; }
   navigation > .navbar .navbar-collapse[aria-expanded='true'] {
@@ -5963,7 +6004,8 @@ navigation > .navbar {
       padding: 3px 5px;
       font-size: 12px;
       color: #888;
-      margin-right: 5px; }
+      margin-right: 5px;
+      cursor: pointer; }
     navigation > .navbar #topCategories .nav-pills > li > a.all {
       padding-right: 15px;
       border-right: 1px solid #ccc; }
@@ -5992,7 +6034,8 @@ navigation > .navbar {
       color: #888;
       padding: 2px 0;
       display: block;
-      position: relative; }
+      position: relative;
+      cursor: pointer; }
       navigation > .navbar #subCategories p.active, navigation > .navbar #subCategories p:hover {
         color: #000; }
       navigation > .navbar #subCategories p:hover:before, navigation > .navbar #subCategories p.active:before {
@@ -6033,7 +6076,8 @@ navigation > .navbar {
   float: right;
   margin: 10px 0 0; }
   .counter navigation > .navbar .container-fluid > .navbar-header button.tag span, navigation > .navbar .container-fluid > .navbar-header .counter button.tag span, .counter .tag span {
-    background: none; }
+    background: none;
+    cursur: pointer; }
 
 /* Load partials */
 /* =================================================== TYPOGRAPHY ==*/
@@ -6057,7 +6101,8 @@ h3, h4 {
 
 h4 {
   font-weight: normal;
-  color: #999; }
+  color: #000;
+  font-style: italic; }
 
 ul, ol {
   padding-left: 16px; }
@@ -6065,6 +6110,7 @@ ul, ol {
 /* Header Ausklappen */
 article h2, article h3, article h4, article .h2, article .h3, article .h4 {
   position: relative;
+  cursor: pointer;
   /* Caret icons */
   /* Minimise if hidden */ }
   article h2:before, article h3:before, article h4:before, article .h2:before, article .h3:before, article .h4:before {
@@ -6094,8 +6140,8 @@ article h2, article h3, article h4, article .h2, article .h3, article .h4 {
   text-align: center;
   border: 3px dashed #eee;
   height: 100%;
-  padding: 30px 0 0;
-  margin: 0 15px; }
+  padding: 30px 0 0 !important;
+  margin: 20px 15px !important; }
 
 .howto p {
   margin: 10px 0 20px;
@@ -6174,92 +6220,111 @@ html, body, #wrapper-page {
   width: 100%;
   overflow: hidden; }
   html app-root, html approot, body app-root, body approot, #wrapper-page app-root, #wrapper-page approot {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap; }
     html app-root .jumbotron, html approot .jumbotron, body app-root .jumbotron, body approot .jumbotron, #wrapper-page app-root .jumbotron, #wrapper-page approot .jumbotron {
       max-height: 80px;
       margin: 0;
       padding: 10px;
+      -ms-flex-negative: 0;
       flex-shrink: 0;
+      -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
       flex-grow: 0;
+      -ms-flex-preferred-size: 50px;
       flex-basis: 50px; }
     html app-root > .container, html app-root > .step, html approot > .container, html approot > .step, body app-root > .container, body app-root > .step, body approot > .container, body approot > .step, #wrapper-page app-root > .container, #wrapper-page app-root > .step, #wrapper-page approot > .container, #wrapper-page approot > .step {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
       flex: 1 1 auto;
+      display: -ms-flexbox;
       display: flex;
+      display: -webkit-box;
       overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -ms-flex-wrap: nowrap;
       flex-wrap: nowrap; }
       html app-root > .container navigation, html app-root > .step navigation, html app-root > .container content, html app-root > .step content, html approot > .container navigation, html approot > .step navigation, html approot > .container content, html approot > .step content, body app-root > .container navigation, body app-root > .step navigation, body app-root > .container content, body app-root > .step content, body approot > .container navigation, body approot > .step navigation, body approot > .container content, body approot > .step content, #wrapper-page app-root > .container navigation, #wrapper-page app-root > .step navigation, #wrapper-page app-root > .container content, #wrapper-page app-root > .step content, #wrapper-page approot > .container navigation, #wrapper-page approot > .step navigation, #wrapper-page approot > .container content, #wrapper-page approot > .step content {
+        -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
         flex-grow: 0;
+        -ms-flex-negative: 1;
         flex-shrink: 1;
+        -ms-flex-preferred-size: auto;
         flex-basis: auto; }
       html app-root > .container .row h3.step, html app-root > .step .row h3.step, html approot > .container .row h3.step, html approot > .step .row h3.step, body app-root > .container .row h3.step, body app-root > .step .row h3.step, body approot > .container .row h3.step, body approot > .step .row h3.step, #wrapper-page app-root > .container .row h3.step, #wrapper-page app-root > .step .row h3.step, #wrapper-page approot > .container .row h3.step, #wrapper-page approot > .step .row h3.step {
         display: block; }
       html app-root > .container #programmes, html app-root > .step #programmes, html approot > .container #programmes, html approot > .step #programmes, body app-root > .container #programmes, body app-root > .step #programmes, body approot > .container #programmes, body approot > .step #programmes, #wrapper-page app-root > .container #programmes, #wrapper-page app-root > .step #programmes, #wrapper-page approot > .container #programmes, #wrapper-page approot > .step #programmes {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
         flex-grow: 1;
+        -ms-flex-negative: 1;
         flex-shrink: 1;
+        -ms-flex-preferred-size: auto;
         flex-basis: auto;
         margin-bottom: 25px;
         min-height: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap; }
         html app-root > .container #programmes article, html app-root > .step #programmes article, html approot > .container #programmes article, html approot > .step #programmes article, body app-root > .container #programmes article, body app-root > .step #programmes article, body approot > .container #programmes article, body approot > .step #programmes article, #wrapper-page app-root > .container #programmes article, #wrapper-page app-root > .step #programmes article, #wrapper-page approot > .container #programmes article, #wrapper-page approot > .step #programmes article {
+          -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
           flex-grow: 0;
+          -ms-flex-negative: 0;
           flex-shrink: 0;
+          -ms-flex-preferred-size: 50%;
           flex-basis: 50%;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
+          -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
           float: none;
           padding: 0; }
           html app-root > .container #programmes article .programme-header, html app-root > .step #programmes article .programme-header, html approot > .container #programmes article .programme-header, html approot > .step #programmes article .programme-header, body app-root > .container #programmes article .programme-header, body app-root > .step #programmes article .programme-header, body approot > .container #programmes article .programme-header, body approot > .step #programmes article .programme-header, #wrapper-page app-root > .container #programmes article .programme-header, #wrapper-page app-root > .step #programmes article .programme-header, #wrapper-page approot > .container #programmes article .programme-header, #wrapper-page approot > .step #programmes article .programme-header {
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
             flex-grow: 1;
+            -ms-flex-negative: 0;
             flex-shrink: 0;
+            -ms-flex-preferred-size: auto;
             flex-basis: auto; }
-          html app-root > .container #programmes article .wrapper-programme, html app-root > .step #programmes article .wrapper-programme, html approot > .container #programmes article .wrapper-programme, html approot > .step #programmes article .wrapper-programme, body app-root > .container #programmes article .wrapper-programme, body app-root > .step #programmes article .wrapper-programme, body approot > .container #programmes article .wrapper-programme, body approot > .step #programmes article .wrapper-programme, #wrapper-page app-root > .container #programmes article .wrapper-programme, #wrapper-page app-root > .step #programmes article .wrapper-programme, #wrapper-page approot > .container #programmes article .wrapper-programme, #wrapper-page approot > .step #programmes article .wrapper-programme {
+          html app-root > .container #programmes article .wrapper-programme, html app-root > .step #programmes article .wrapper-programme, html app-root > .container #programmes article .howto, html app-root > .step #programmes article .howto, html approot > .container #programmes article .wrapper-programme, html approot > .step #programmes article .wrapper-programme, html approot > .container #programmes article .howto, html approot > .step #programmes article .howto, body app-root > .container #programmes article .wrapper-programme, body app-root > .step #programmes article .wrapper-programme, body app-root > .container #programmes article .howto, body app-root > .step #programmes article .howto, body approot > .container #programmes article .wrapper-programme, body approot > .step #programmes article .wrapper-programme, body approot > .container #programmes article .howto, body approot > .step #programmes article .howto, #wrapper-page app-root > .container #programmes article .wrapper-programme, #wrapper-page app-root > .step #programmes article .wrapper-programme, #wrapper-page app-root > .container #programmes article .howto, #wrapper-page app-root > .step #programmes article .howto, #wrapper-page approot > .container #programmes article .wrapper-programme, #wrapper-page approot > .step #programmes article .wrapper-programme, #wrapper-page approot > .container #programmes article .howto, #wrapper-page approot > .step #programmes article .howto {
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
             flex-grow: 1;
+            -ms-flex-negative: 1;
             flex-shrink: 1;
+            -ms-flex-preferred-size: auto;
             flex-basis: auto;
             overflow-y: scroll;
             overflow-x: hidden;
             padding: 0 15px; }
 
-/* =================================================== Imprint ==  */
-#imprintBar {
-  position: absolute;
-  bottom: 0;
-  height: 25px;
-  border-top: 1px solid #ccc;
-  width: 100%;
-  background: #fff;
-  z-index: 999;
-  font-size: 11px;
-  color: rgba(136, 136, 136, 0.8);
-  text-align: right;
-  padding: 4px 10px; }
-  #imprintBar a {
-    color: #888; }
-
-#imprint .modal-dialog,
-#methods .modal-dialog {
-  width: 80%; }
-#imprint .modal-title.h3,
-#imprint .modal-subheadline.h4,
-#methods .modal-title.h3,
-#methods .modal-subheadline.h4 {
-  text-transform: uppercase;
-  color: #888;
-  font-size: 1.0em; }
-#imprint .modal-subheadline.h4,
-#methods .modal-subheadline.h4 {
-  color: #000;
-  margin-top: 30px; }
-
 /* Scrollable if screen too narrow in height */
-@media screen and (max-height: 500px) and (min-width: 780px) {
+@media screen and (max-height: 500px) and (min-width: 929px) {
   html, body, #wrapper-page {
     height: 800px;
     width: 100%;
@@ -6268,7 +6333,7 @@ html, body, #wrapper-page {
   #imprintBar {
     position: fixed;
     bottom: 0; } }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 929px) {
   #imprintBar {
     position: fixed;
     bottom: 0; }
@@ -6276,7 +6341,7 @@ html, body, #wrapper-page {
   #loadingOverlay #loadingGif {
     width: 90%;
     margin-left: -45%;
-    top: 60%;
+    top: 70%;
     margin-top: -30%; }
     #loadingOverlay #loadingGif img {
       width: 100%;
@@ -6293,10 +6358,8 @@ html, body, #wrapper-page {
     padding-right: 10px;
     padding-left: 10px; }
 
-  navigation .navbar {
-    margin: 0 -15px 0; }
-    navigation .navbar .nav > li.dropdown > a {
-      padding: 5px 8px; }
+  navigation .navbar .nav > li.dropdown > a {
+    padding: 5px 8px; }
 
   #navigationHeader, #contentHeader, #programmes .programme-header {
     display: none; }
@@ -6314,8 +6377,6 @@ html, body, #wrapper-page {
       height: auto; }
       html app-root .container, html app-root .step, html approot .container, html approot .step, body app-root .container, body app-root .step, body approot .container, body approot .step, #wrapper-page app-root .container, #wrapper-page app-root .step, #wrapper-page approot .container, #wrapper-page approot .step {
         display: block; }
-        html app-root .container .row h3.step, html app-root .step .row h3.step, html approot .container .row h3.step, html approot .step .row h3.step, body app-root .container .row h3.step, body app-root .step .row h3.step, body approot .container .row h3.step, body approot .step .row h3.step, #wrapper-page app-root .container .row h3.step, #wrapper-page app-root .step .row h3.step, #wrapper-page approot .container .row h3.step, #wrapper-page approot .step .row h3.step {
-          display: block; }
         html app-root .container #programmes, html app-root .step #programmes, html approot .container #programmes, html approot .step #programmes, body app-root .container #programmes, body app-root .step #programmes, body approot .container #programmes, body approot .step #programmes, #wrapper-page app-root .container #programmes, #wrapper-page app-root .step #programmes, #wrapper-page approot .container #programmes, #wrapper-page approot .step #programmes {
           display: block; }
           html app-root .container #programmes article, html app-root .step #programmes article, html approot .container #programmes article, html approot .step #programmes article, body app-root .container #programmes article, body app-root .step #programmes article, body approot .container #programmes article, body approot .step #programmes article, #wrapper-page app-root .container #programmes article, #wrapper-page app-root .step #programmes article, #wrapper-page approot .container #programmes article, #wrapper-page approot .step #programmes article {
@@ -6325,6 +6386,12 @@ html, body, #wrapper-page {
               display: block; }
             html app-root .container #programmes article .wrapper-programme, html app-root .step #programmes article .wrapper-programme, html approot .container #programmes article .wrapper-programme, html approot .step #programmes article .wrapper-programme, body app-root .container #programmes article .wrapper-programme, body app-root .step #programmes article .wrapper-programme, body approot .container #programmes article .wrapper-programme, body approot .step #programmes article .wrapper-programme, #wrapper-page app-root .container #programmes article .wrapper-programme, #wrapper-page app-root .step #programmes article .wrapper-programme, #wrapper-page approot .container #programmes article .wrapper-programme, #wrapper-page approot .step #programmes article .wrapper-programme {
               display: block; } }
+@media screen and (max-width: 768px) {
+  navigation .navbar {
+    margin: 0 -15px 0; }
+
+  .jumbotron .logo {
+    width: 214px; } }
 /* =================================================== GENERAL SYTLING ==*/
 /* =================================================== BOOTSTRAP REWRITING ==*/
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {

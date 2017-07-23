@@ -47,6 +47,15 @@ $(function () {
             }
         }
     );
+
+    $(".navbar-toggle").click(function() {
+        $navbar = $(".navbar");
+        if ($navbar.attr("open")) {
+            $navbar.removeAttr("open");
+        } else {
+            $navbar.attr("open", "true");
+        }
+    })
     
     /* Hides second headline once party is clicked + removes Debug Parties */
     
@@ -98,7 +107,7 @@ $(function () {
         //hide Loading Animation
         $('#loadingOverlay').fadeOut();
     }, 1000);
-    
+
     $("body").on(
       "click",
       ":header",
