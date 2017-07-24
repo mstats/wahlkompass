@@ -16,3 +16,6 @@ Der Wahlkompass Digitales schafft Transparenz im Wahlkampf und zeigt, welche Ant
 
 Das Tool verdeutlicht visuell, welche Initiativen und Positionen die Parteien in diesen Bereichen vertreten und wo sie sich unterscheiden: Wie kann digitale Wirtschaft in Deutschland gefördert werden? Wer setzt sich für mehr Datenschutz ein, wer nicht? Wo soll die digitale Infrastruktur ausgebaut werden? Welche Parteien setzen sich für die digitale Bildung unserer Kinder ein? Mit diesem Angebot können interessierte WählerInnen und JournalistInnen sehen, welche Schritte im Bereich Digitalpolitik geplant sind. Darüber hinaus erklären unabhängige ExpertInnen, welche Rolle digitale Initiativen für den einen oder anderen Bereich spielen können. 
 
+## Software
+
+Nach Abschluss des Projekts planen wir die Software hier bereitzustellen.
