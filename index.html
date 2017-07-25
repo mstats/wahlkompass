@@ -19,6 +19,21 @@
   <link id="theme" rel="stylesheet" href="assets/style_wahlkompass.css" type="text/css">
   <script type="text/javascript" src="assets/szigEmbed.js"></script>
   <script src="assets/script.js"></script>
+  <!-- Piwik -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//piwik.hiig.de/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', '11']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Piwik Code -->
 </head>
 <body>
     <div id="wrapper-page">
@@ -33,9 +48,15 @@
         </div>
         <app-root></app-root>
         <div id="imprintBar">
+            Wahlkompass Digitales
+            ·
+            <span class="hidden-xs hidden-sm">
+                Ein Angebot des Alexander von Humboldt Institut für Internet und Gesellschaft
+            </span>
+            <span class="hidden-md hidden-lg">hiig.de</span>
+            ·
             <!-- Trigger the impressum modal -->
-            Wahlkompass Digitales · <span class="hidden-xs hidden-sm">Ein Angebot des Alexander von Humboldt Institut für Internet und Gesellschaft</span><span class="hidden-md hidden-lg">hiig.de</span> · <a type="button" data-toggle="modal" data-target="#imprint">Impressum</a>
- · <a type="button" data-toggle="modal" data-target="#imprint">Impressum</a>
+            <a type="button" data-toggle="modal" data-target="#imprint">Impressum</a>
         </div>
         <!-- Impressum Modal -->
         <div id="imprint" class="modal fade" role="dialog">
@@ -127,5 +148,5 @@
             </div>
         </div>
     </div>
-<script type="text/javascript" src="inline.e59cdcd7aa250d1957b4.bundle.js"></script><script type="text/javascript" src="polyfills.15a0ea7403e019a8a4f8.bundle.js"></script><script type="text/javascript" src="scripts.fc698a107dc9c2c91c3c.bundle.js"></script><script type="text/javascript" src="vendor.3607d6fffb668a55caf3.bundle.js"></script><script type="text/javascript" src="main.cc696e677c9a53086896.bundle.js"></script></body>
+<script type="text/javascript" src="inline.86252f76da520e06b620.bundle.js"></script><script type="text/javascript" src="polyfills.15a0ea7403e019a8a4f8.bundle.js"></script><script type="text/javascript" src="scripts.fc698a107dc9c2c91c3c.bundle.js"></script><script type="text/javascript" src="vendor.07212792308d1dfa31ee.bundle.js"></script><script type="text/javascript" src="main.a2ea6d1f93336ad826fc.bundle.js"></script></body>
 </html>
