@@ -18,7 +18,7 @@
 
 $(function () {
     
-    /* Hides first headline once filter is clicked */
+    /* Collapsing #topAndSubCategories */
     
     //$('#topAndSubCategories').click(
     //    function () {
@@ -57,6 +57,27 @@ $(function () {
         }
     })
     
+    // collapse on scroll
+
+    //FF
+    document.addEventListener('DOMMouseScroll', function (event) {
+        if ($('#topAndSubCategories[aria-expanded="true"]').length>0) {
+            $(".navbar-toggle").click();
+        }
+//        console.log('scrolling', event.target);
+    }, true /*Capture event*/);
+
+        // Chrome and Safari
+        document.addEventListener('mousewheel', function (event) {
+            if ($('#topAndSubCategories[aria-expanded="true"]').length>0) {
+                $(".navbar-toggle").click();
+            }
+    //        console.log('scrolling', event.target);
+        }, true /*Capture event*/);
+
+
+
+
     /* Hides second headline once party is clicked + removes Debug Parties */
     
     $('content #parties .btn').click(
@@ -117,6 +138,7 @@ $(function () {
       }
     );
 
+    /* for SZ EMBED script to adjust height  */
     szEmbedService.setHeight("800px");
 
 });
